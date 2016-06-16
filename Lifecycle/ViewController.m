@@ -16,8 +16,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"viewDidLoad was called");
 }
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    NSLog(@"viewDidAppear was called");
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    NSLog(@"viewWillDisappear was called");
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    NSLog(@"viewDidDisappear was called");
+}
+
+
+
+/*
+ viewDidLoad
+ viewWillAppear
+ viewDidAppear
+ (user does stuff)
+ viewWillDisappear
+ viewDidDisappear
+ */
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
